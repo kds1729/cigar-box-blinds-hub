@@ -24,7 +24,8 @@
 // <addr> is the nRF24 address to send to (3 or 5 bytes). The hub uses aaaaaaaaaa: on air it acts
 // as extra preamble in front of the real PowerView frame, which is carried in the payload.
 //
-// SPDX-License-Identifier: MIT
+// Copyright (C) 2026 Keith Sprochi
+// SPDX-License-Identifier: GPL-2.0-or-later
 
 #include <SPI.h>
 #include <RF24.h>

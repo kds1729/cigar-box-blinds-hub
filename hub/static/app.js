@@ -1,3 +1,5 @@
+// Copyright (C) 2026 Keith Sprochi
+// SPDX-License-Identifier: GPL-2.0-or-later
 // One tab per room; a mock window shows the blind where it last reported itself.
 // Click the window to send the blind to that height. Positions are percent open
 // (100 = fully open, 0 = closed) on the blind's own scale.

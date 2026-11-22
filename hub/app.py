@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Keith Sprochi
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Blinds hub: web UI + REST API + cron-style scheduler, talking to the antenna Nano
 over USB serial via controller.BlindsController.
 

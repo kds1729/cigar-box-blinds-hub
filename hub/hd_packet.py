@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Keith Sprochi
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Build PowerView Gen 2 radio packets with a valid checksum.
 
 Usage (prints a ready-to-paste `txr` line for the BlindsRadio sketch):

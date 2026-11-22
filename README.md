@@ -211,4 +211,8 @@ Repository layout:
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+Copyright (C) 2026 Keith Sprochi.
+
+This project is free software under the **GNU General Public License, version 2 or (at your option) any later version** (`GPL-2.0-or-later`). See [LICENSE](LICENSE). You may use, copy, change and share it, including commercially. If you distribute a modified version, you must share its source under the same license.
+
+Version 2 or later matches the RF24 library, which the firmware links against and which is GPL version 2.

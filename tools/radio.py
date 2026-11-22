@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Keith Sprochi
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Setup helper: talk to the BlindsRadio Nano directly. Stop the hub first, because only
 one program can have the Nano's serial port open.
 

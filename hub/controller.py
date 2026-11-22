@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Keith Sprochi
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Owns the serial connection to the antenna Nano and drives the blinds.
 
 Opens the serial port once at process start (opening it again resets the Nano), so only
