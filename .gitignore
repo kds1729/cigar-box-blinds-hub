@@ -1,0 +1,8 @@
+# your own home's config and state
+hub/rooms.json
+hub/rooms.json.tmp
+hub/schedule.json
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,13 @@
+# Intel Macs (and many Intel PCs): boot automatically when mains power returns.
+# Sets bit 0 (AFTERG3_EN) of the LPC bridge's GEN_PMCON_3 register to 0 at every boot.
+# Check your LPC bridge address first with: lspci | grep -i lpc   (usually 00:1f.0)
+# Tested on a 2013-era MacBook Air (MacBookAir6,2) running without a battery.
+[Unit]
+Description=Boot automatically when mains power returns
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/setpci -s 00:1f.0 0xa4.b=0:1
+
+[Install]
+WantedBy=multi-user.target

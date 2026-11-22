@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blinds</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<nav id="tabs"></nav>
+
+<main>
+  <div id="window" title="Click to move the blind here">
+    <div id="glass"></div>
+    <div id="fabric"></div>
+    <div id="nogo"></div>
+    <div id="target"></div>
+  </div>
+  <div id="buttons">
+    <button id="open">Open</button>
+    <button id="stop">Stop</button>
+    <button id="close">Close</button>
+  </div>
+  <p id="status"></p>
+
+  <details id="schedule-section">
+    <summary>Schedule</summary>
+    <div id="schedule-grid"></div>
+    <form id="add-rule">
+      <select name="room" id="rule-room"></select>
+      <label><input type="checkbox" name="days" value="mon">Mon</label>
+      <label><input type="checkbox" name="days" value="tue">Tue</label>
+      <label><input type="checkbox" name="days" value="wed">Wed</label>
+      <label><input type="checkbox" name="days" value="thu">Thu</label>
+      <label><input type="checkbox" name="days" value="fri">Fri</label>
+      <label><input type="checkbox" name="days" value="sat">Sat</label>
+      <label><input type="checkbox" name="days" value="sun">Sun</label>
+      <input type="time" name="time" required>
+      <input type="number" name="percent" min="0" max="100" placeholder="open %" required>
+      <button type="submit">Add</button>
+    </form>
+  </details>
+
+  <details id="setup">
+    <summary>Setup</summary>
+    <p>No-go line: <span id="limit-text"></span></p>
+    <p class="hint">To set it, click the window until the blind's bottom rail is just above the items, then:</p>
+    <button id="set-limit">Set no-go line at the blind's current position</button>
+    <button id="clear-limit">Remove no-go line</button>
+    <p>Top line: <span id="top-text"></span></p>
+    <p class="hint">To set it, click the window until the bottom rail is a safe distance below the top, then:</p>
+    <button id="set-top">Set top line at the blind's current position</button>
+    <button id="clear-top">Remove top line</button>
+  </details>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

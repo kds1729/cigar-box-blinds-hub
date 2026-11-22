@@ -1,0 +1,17 @@
+# Copy to /etc/systemd/system/, replace YOURUSER, then:
+#   sudo systemctl daemon-reload && sudo systemctl enable --now blinds-hub
+[Unit]
+Description=Cigar box blinds hub
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=YOURUSER
+SupplementaryGroups=dialout
+WorkingDirectory=/opt/blinds
+ExecStart=/opt/blinds/.venv/bin/python hub/app.py --port /dev/ttyUSB0 --host ::
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

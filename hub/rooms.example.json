@@ -1,0 +1,13 @@
+{
+  "room1": {
+    "label": "Living room",
+    "dest": "1234c0",
+    "source": "abcd",
+    "shades": [1],
+    "rc1": 0,
+    "rc2": 0,
+    "hub_rc": 0,
+    "captured": true,
+    "blind_id": ""
+  }
+}

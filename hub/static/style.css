@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body { font-family: -apple-system, system-ui, sans-serif; margin: 0; color: #222; background: #f4f2ee; }
+main { max-width: 480px; margin: 0 auto; padding: 1em; text-align: center; }
+
+/* tabs stay pinned at the top while scrolling */
+#tabs { display: flex; background: #fff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 10; }
+#tabs button { flex: 1; padding: 1em 0; font-size: 1.05em; border: 0; background: none; color: #666; cursor: pointer; border-bottom: 3px solid transparent; }
+#tabs button.active { color: #111; font-weight: 600; border-bottom-color: #2a6fdb; }
+
+/* mock window: the fabric hangs from the top; its height is the closed fraction */
+#window { position: relative; width: 100%; aspect-ratio: 3 / 4; margin: 0.5em auto 1em; border: 2px solid #555;
+          cursor: crosshair; overflow: hidden; touch-action: manipulation;
+          /* on phones, shrink the window so tabs + window + buttons fit on one screen */
+          max-height: calc(100vh - 15em); max-height: calc(100svh - 15em); }
+#glass { position: absolute; inset: 0; background: #cfe6f7; }
+#fabric { position: absolute; top: 0; left: 0; right: 0; height: 0; background: #8a8a8a; border-bottom: 8px solid #3a3a3a; } /* dark bottom rail; border-box keeps it showing when fully open */
+#nogo { position: absolute; left: 0; right: 0; bottom: 0; height: 0; display: none;
+        border-top: 3px dashed #d00; background: rgba(220, 0, 0, 0.12); cursor: not-allowed; }
+#target { position: absolute; left: 0; right: 0; height: 0; display: none; border-top: 2px dashed #0b3d91; }
+
+#buttons { display: flex; gap: 0.5em; }
+#buttons button { flex: 1; padding: 0.9em; font-size: 1.1em; border: 0; border-radius: 8px; color: #fff; cursor: pointer; background: #5a6b7d; }
+#buttons #stop { background: #c0392b; }
+#status { min-height: 1.4em; color: #555; font-size: 0.95em; }
+#status.bad { color: #c00; }
+
+details { text-align: left; margin-top: 1.2em; background: #fff; border-radius: 8px; padding: 0.6em 0.9em; }
+summary { cursor: pointer; color: #555; }
+.hint { color: #666; font-size: 0.9em; }
+details button { margin: 0.3em 0.3em 0.3em 0; padding: 0.5em 0.8em; }
+#schedule-grid table { border-collapse: collapse; width: 100%; margin: 0.6em 0; font-size: 0.85em; }
+#schedule-grid th, #schedule-grid td { border: 1px solid #ddd; padding: 0.3em; }
+#add-rule { display: flex; flex-wrap: wrap; gap: 0.4em; align-items: center; font-size: 0.85em; }
+#hover-guide { position: absolute; left: 0; right: 0; height: 0; display: none; border-top: 1px solid rgba(0,0,0,0.55); pointer-events: none; }
+#hover-tag { position: absolute; right: 6px; display: none; transform: translateY(-120%); pointer-events: none;
+             background: rgba(0,0,0,0.75); color: #fff; font-size: 0.85em; padding: 2px 6px; border-radius: 4px; }
